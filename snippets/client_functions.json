@@ -14,15 +14,37 @@
         "body": "ReplaceObjectModelMesh(${1:ModelId}, ${2:PathToMesh})$0\r\n",
         "description": "(Client) Function: ReplaceObjectModelMesh(ModelId,PathToMesh)"
     },
+    "Client.ReplaceAnimationLibrarySequence": {
+        "prefix": "ReplaceAnimationLibrarySequence",
+        "body": "ReplaceAnimationLibrarySequence(${1:AnimationId}, ${2:PathToNewAnimation},${3:LoopCount},${4:bLayerBlendSpline})$0\r\n",
+        "description": "(Client) Function: ReplaceAnimationLibrarySequence(AnimationId, PathToNewAnimiation,LoopCount,bLayeredBlendSpine)"
+    },
     "Client.GetAllFilesInPak": {
         "prefix": "GetAllFilesInPak",
         "body": "GetAllFilesInPak(${1:PakName})$0\r\n",
         "description": "(Client) Function: GetAllFilesInPak(PakName)"
     },
+    
+    
+    "Client.SetStorageValue": {
+        "prefix": "SetStorageValue",
+        "body": "SetStorageValue(${1:key},${2:value})$0\r\n",
+        "description": "(Client) Function: SetStorageValue(key,value)"
+    },
+    "Client.GetStorageValue": {
+        "prefix": "GetGameVersion",
+        "body": "GetGameVersion(${1:key})$0\r\n",
+        "description": "(Client) Function: GetGameVersion(key)"
+    },
     "Client.GetGameVersion": {
         "prefix": "GetGameVersion",
         "body": "GetGameVersion()$0\r\n",
         "description": "(Client) Function: GetGameVersion()"
+    },
+    "Client.GetGameVersionString": {
+        "prefix": "GetGameVersionString",
+        "body": "GetGameVersionString()$0\r\n",
+        "description": "(Client) Function: GetGameVersionString()"
     },
     "Client.IsGameDevMode": {
         "prefix": "IsGameDevMode",
@@ -39,6 +61,48 @@
         "body": "InvokeDamageFX(${1:value})$0\r\n",
         "description": "(Client) Function: InvokeDamageFX(value)"
     },
+    "Client.UpdateDiscordActivity": {
+        "prefix": "UpdateDiscordActivity",
+        "body": "UpdateDiscordActivity(${1:activity})$0\r\n",
+        "description": "(Client) Function: UpdateDiscordActivity(activity)"
+    },
+    "Client.ConnectToServer": {
+        "prefix": "ConnectToServer",
+        "body": "ConnectToServer(${1:address},${2:port},${3:password (optional)}, ${4: levelMap (optional)})$0\r\n",
+        "description": "(Client) Function: ConnectToServer(address, port, password (optional), levelMap (optional))"
+    },
+    "Client.SetNearClipPlane": {
+        "prefix": "SetNearClipPlane",
+        "body": "SetNearClipPlane(${1:distance})$0\r\n",
+        "description": "(Client) Function: SetNearClipPlane(distance)"
+    },
+    "Client.CreateSky": {
+        "prefix": "CreateSky",
+        "body": "CreateSky()$0\r\n",
+        "description": "(Client) Function: CreateSky()"
+    },
+    "Client.GetAllPackages": {
+        "prefix": "GetAllPackages",
+        "body": "GetAllPackages()$0\r\n",
+        "description": "(Client) Function: GetAllPackages()"
+    },
+    "Client.GetPackageFiles": {
+        "prefix": "GetPackageFiles",
+        "body": "GetPackageFiles(${1:packageName})$0\r\n",
+        "description": "(Client) Function: GetPackageFiles(packageName)"
+    },
+    "Client.IsServer": {
+        "prefix": "IsServer",
+        "body": "IsServer()$0\r\n",
+        "description": "(Client) Function: IsServer()"
+    },
+    "Client.IsClient": {
+        "prefix": "IsClient",
+        "body": "IsClient()$0\r\n",
+        "description": "(Client) Function: IsClient()"
+    },
+
+
     "Client.RGBA": {
         "prefix": "RGBA",
         "body": "RGBA(${1:r}, ${2:g}, ${3:b}, ${4:a})$0\r\n",
@@ -54,6 +118,8 @@
         "body": "HexToRGBA(${1:HexColor})$0\r\n",
         "description": "(Client) Function: HexToRGBA(HexColor)"
     },
+
+
     "Client.LineTrace": {
         "prefix": "LineTrace",
         "body": "LineTrace(${1:sX}, ${2:sY}, ${3:sZ}, ${4:eX}, ${5:eY}, ${6:eZ }, ${7:complex (optional)})$0\r\n",
@@ -114,6 +180,11 @@
         "body": "Lerp(${1:t}, ${2:a}, ${3:b})$0\r\n",
         "description": "(Client) Function: Lerp(t,a,b)"
     },
+    "Client.LerpVector": {
+        "prefix": "LerpVector",
+        "body": "LerpVector(${1:t}, ${2:aX}, ${3:aY},${4:aZ},${5:bX}, ${6:bY},${7:bZ})$0\r\n",
+        "description": "(Client) Function: LerpVector(t, aX, aY, aZ, bX, bY, bZ)"
+    },
     "Client.VectorToRotation": {
         "prefix": "VectorToRotation",
         "body": "VectorToRotation(${1:x}, ${2:y}, ${3:z})$0\r\n",
@@ -149,6 +220,8 @@
         "body": "UpdateStreamingLevels()$0\r\n",
         "description": "(Client) Function: UpdateStreamingLevels()"
     },
+
+
     "Client.GetTickCount": {
         "prefix": "GetTickCount",
         "body": "GetTickCount()$0\r\n",
@@ -164,10 +237,26 @@
         "body": "GetDeltaSeconds()$0\r\n",
         "description": "(Client) Function: GetDeltaSeconds()"
     },
+
+    "Client.TogglePlayerTag": {
+        "prefix": "TogglePlayerTag",
+        "body": "TogglePlayerTag(${1:player}, ${2:tagname}, ${3:enable})$0\r\n",
+        "description": "(Client) Function: TogglePlayerTag(player, tagname, enable)"
+    },
+    "Client.SetPlayerVoiceTone": {
+        "prefix": "SetPlayerVoiceTone",
+        "body": "SetPlayerVoiceTone(${1:player}, ${2:voiceTone})$0\r\n",
+        "description": "(Client) Function: SetPlayerVoiceTone(player,voiceTone)"
+    },
     "Client.GetPlayerActor": {
         "prefix": "GetPlayerActor",
         "body": "GetPlayerActor(${1:playerid})$0\r\n",
         "description": "(Client) Function: GetPlayerActor(playerid)"
+    },
+    "Client.GetPlayerSkeletalMeshComponent": {
+        "prefix": "GetPlayerSkeletalMeshComponent",
+        "body": "GetPlayerSkeletalMeshComponent(${1:player},${2:componentName})$0\r\n",
+        "description": "(Client) Function: GetPlayerSkeletalMeshComponent(player,componentName)"
     },
     "Client.GetPlayerId": {
         "prefix": "GetPlayerId",
@@ -194,6 +283,16 @@
         "body": "GetPlayerRotationRate()$0\r\n",
         "description": "(Client) Function: GetPlayerRotationRate()"
     },
+    "Client.SetPlayerJumpZVelocity": {
+        "prefix": "SetPlayerJumpZVelocity",
+        "body": "SetPlayerJumpZVelocity(${1:JumpZVelocity})$0\r\n",
+        "description": "(Client) Function: SetPlayerJumpZVelocity(JumpZVelocity)"
+    },
+    "Client.GetPlayerJumpZVelocity": {
+        "prefix": "GetPlayerJumpZVelocity",
+        "body": "GetPlayerJumpZVelocity()$0\r\n",
+        "description": "(Client) Function: GetPlayerJumpZVelocity()"
+    },
     "Client.GetPlayerWeapon": {
         "prefix": "GetPlayerWeapon",
         "body": "GetPlayerWeapon(${2:weaponslot (optional)})$0\r\n",
@@ -213,11 +312,6 @@
         "prefix": "GetPlayerBoneNames",
         "body": "GetPlayerBoneNames()$0\r\n",
         "description": "(Client) Function: GetPlayerBoneNames()"
-    },
-    "Client.GetPlayerSkeletalMeshComponent": {
-        "prefix": "GetPlayerSkeletalMeshComponent",
-        "body": "GetPlayerSkeletalMeshComponent(${2:ComponentName})$0\r\n",
-        "description": "(Client) Function: GetPlayerSkeletalMeshComponent(player,ComponentName)"
     },
     "Client.GetAllPlayersInSphere": {
         "prefix": "GetAllPlayersInSphere",
@@ -243,16 +337,6 @@
         "prefix": "IsFirstPersonCamera",
         "body": "IsFirstPersonCamera()$0\r\n",
         "description": "(Client) Function: IsFirstPersonCamera()"
-    },
-    "Client.SetNearClipPlane": {
-        "prefix": "SetNearClipPlane",
-        "body": "SetNearClipPlane(${1:distance})$0\r\n",
-        "description": "(Client) Function: SetNearClipPlane(distance)"
-    },
-    "Client.ConnectToServer": {
-        "prefix": "ConnectToServer",
-        "body": "ConnectToServer(${1:Address}, ${2:Port}, ${3:Password (optional)})$0\r\n",
-        "description": "(Client) Function: ConnectToServer(Address,Port,Password (optional))"
     },
     "Client.SetControllerOrientedMovement": {
         "prefix": "SetControllerOrientedMovement",
@@ -342,12 +426,17 @@
     "Client.GetPlayerVehicle": {
         "prefix": "GetPlayerVehicle",
         "body": "GetPlayerVehicle()$0\r\n",
-        "description": "(Client) Function: GetPlayerVehicle(player)"
+        "description": "(Client) Function: GetPlayerVehicle()"
     },
     "Client.IsPlayerInVehicle": {
         "prefix": "IsPlayerInVehicle",
         "body": "IsPlayerInVehicle(${1:player (optional)})$0\r\n",
         "description": "(Client) Function: IsPlayerInVehicle(player (optional))"
+    },
+    "Client.GetPlayerVehicleSeat": {
+        "prefix": "GetPlayerVehicleSeat",
+        "body": "GetPlayerVehicleSeat()$0\r\n",
+        "description": "(Client) Function: GetPlayerVehicleSeat()"
     },
     "Client.GetPlayerEquippedWeaponSlot": {
         "prefix": "GetPlayerEquippedWeaponSlot",
@@ -384,6 +473,18 @@
         "body": "IsPlayerPlayingAnimation()$0\r\n",
         "description": "(Client) Function: IsPlayerPlayingAnimation(player)"
     },
+    "Client.GetPlayerCount": {
+        "prefix": "GetPlayerCount",
+        "body": "GetPlayerCount()$0\r\n",
+        "description": "(Client) Function: GetPlayerCount()"
+    },
+    "Client.CancelAimImmediately": {
+        "prefix": "CancelAimImmediately",
+        "body": "CancelAimImmediately()$0\r\n",
+        "description": "(Client) Function: CancelAimImmediately()"
+    },
+
+
     "Client.StartCameraFade": {
         "prefix": "StartCameraFade",
         "body": "StartCameraFade(${1:FromAlpha}, ${2:ToAlpha}, ${3:Duration }, ${4:HexColor (optional)})$0\r\n",
@@ -459,11 +560,6 @@
         "body": "GetCameraUpVector()$0\r\n",
         "description": "(Client) Function: GetCameraUpVector()"
     },
-    "Client.GetInputAxisValue": {
-        "prefix": "GetInputAxisValue",
-        "body": "GetInputAxisValue(${1:AxisName})$0\r\n",
-        "description": "(Client) Function: GetInputAxisValue(AxisName)"
-    },
     "Client.SetCameraViewDistance": {
         "prefix": "SetCameraViewDistance",
         "body": "SetCameraViewDistance(${1:distance})$0\r\n",
@@ -474,6 +570,8 @@
         "body": "GetCameraViewDistance()$0\r\n",
         "description": "(Client) Function: GetCameraViewDistance()"
     },
+
+
     "Client.CreateWaypoint": {
         "prefix": "CreateWaypoint",
         "body": "CreateWaypoint(${1:x}, ${2:y}, ${3:z}, ${4:text})$0\r\n",
@@ -504,11 +602,15 @@
         "body": "GetAllWaypoints()$0\r\n",
         "description": "(Client) Function: GetAllWaypoints()"
     },
+
+
     "Client.CreateFireworks": {
         "prefix": "CreateFireworks",
         "body": "CreateFireworks(${1:modelid}, ${2:x}, ${3:y}, ${4:z}, ${5:rx}, ${6:ry}, ${7:rz})$0\r\n",
         "description": "(Client) Function: CreateFireworks(modelid,x,y,z,rx,ry,rz)"
     },
+
+
     "Client.GetPackageName": {
         "prefix": "GetPackageName",
         "body": "GetPackageName()$0\r\n",
@@ -524,6 +626,8 @@
         "body": "AddFunctionExport(${1:ExportName}, ${2:ExportFunction})$0\r\n",
         "description": "(Client) Function: AddFunctionExport(ExportName,ExportFunction)"
     },
+
+
     "Client.AddPlayerChat": {
         "prefix": "AddPlayerChat",
         "body": "AddPlayerChat(${2:message})$0\r\n",
@@ -549,6 +653,8 @@
         "body": "GetChatLocation()$0\r\n",
         "description": "(Client) Function: GetChatLocation()"
     },
+
+
     "Client.ShowWeaponHUD": {
         "prefix": "ShowWeaponHUD",
         "body": "ShowWeaponHUD(${1:bShow})$0\r\n",
@@ -559,6 +665,13 @@
         "body": "ShowHealthHUD(${1:show})$0\r\n",
         "description": "(Client) Function: ShowHealthHUD(show)"
     },
+    "Client.NotifyCrosshairHit": {
+        "prefix": "NotifyCrosshairHit",
+        "body": "NotifyCrosshairHit()$0\r\n",
+        "description": "(Client) Function: NotifyCrosshairHit()"
+    },
+
+
     "Client.SetPostEffect": {
         "prefix": "SetPostEffect",
         "body": "SetPostEffect(${1:CategoryName}, ${2:SettingName}, ${3:Value})$0\r\n",
@@ -574,6 +687,8 @@
         "body": "RemovePostProcessMaterial(${1:SlotName})$0\r\n",
         "description": "(Client) Function: RemovePostProcessMaterial(SlotName)"
     },
+
+
     "Client.DrawText": {
         "prefix": "DrawText",
         "body": "DrawText(${1:x}, ${2:y}, ${3:text})$0\r\n",
@@ -669,6 +784,8 @@
         "body": "SetTextBoxText(${1:textid}, ${2:text})$0\r\n",
         "description": "(Client) Function: SetTextBoxText(textid,text)"
     },
+
+
     "Client.SetOceanWaterLevel": {
         "prefix": "SetOceanWaterLevel",
         "body": "SetOceanWaterLevel(${1:Level}, ${2:bIncludeSwimmingVolume (optional)})$0\r\n",
@@ -684,6 +801,8 @@
         "body": "ResetOceanColor()$0\r\n",
         "description": "(Client) Function: ResetOceanColor()"
     },
+
+
     "Client.ShowMouseCursor": {
         "prefix": "ShowMouseCursor",
         "body": "ShowMouseCursor(${1:bShow})$0\r\n",
@@ -699,11 +818,6 @@
         "body": "GetMouseHitEntity()$0\r\n",
         "description": "(Client) Function: GetMouseHitEntity()"
     },
-    "Client.SetInputMode": {
-        "prefix": "SetInputMode",
-        "body": "SetInputMode(${1:InputMode})$0\r\n",
-        "description": "(Client) Function: SetInputMode(InputMode)"
-    },
     "Client.IsMouseCursorEnabled": {
         "prefix": "IsMouseCursorEnabled",
         "body": "IsMouseCursorEnabled()$0\r\n",
@@ -718,7 +832,7 @@
         "prefix": "GetMouseLocation",
         "body": "GetMouseLocation()$0\r\n",
         "description": "(Client) Function: GetMouseLocation()"
-    },
+    },    
     "Client.GetMouseInputDelta": {
         "prefix": "GetMouseInputDelta",
         "body": "GetMouseInputDelta()$0\r\n",
@@ -729,6 +843,8 @@
         "body": "DeprojectMouseLocationToWorld()$0\r\n",
         "description": "(Client) Function: DeprojectMouseLocationToWorld()"
     },
+
+
     "Client.SetTime": {
         "prefix": "SetTime",
         "body": "SetTime(${1:time})$0\r\n",
@@ -744,66 +860,63 @@
         "body": "SetSkySaturation(${1:saturation})$0\r\n",
         "description": "(Client) Function: SetSkySaturation(saturation)"
     },
+    "Client.GetSkySaturation": {
+        "prefix": "GetSkySaturation",
+        "body": "GetSkySaturation()$0\r\n",
+        "description": "(Client) Function: GetSkySaturation()"
+    },
+    "Client.SetCloudSpeed": {
+        "prefix": "SetCloudSpeed",
+        "body": "SetCloudSpeed(${1:speed})$0\r\n",
+        "description": "(Client) Function: SetCloudSpeed(speed)"
+    },
+    "Client.GetCloudSpeed": {
+        "prefix": "GetCloudSpeed",
+        "body": "GetCloudSpeed()$0\r\n",
+        "description": "(Client) Function: GetCloudSpeed()"
+    },
+    "Client.SetCloudDensity": {
+        "prefix": "SetCloudDensity",
+        "body": "SetCloudDensity(${1:density})$0\r\n",
+        "description": "(Client) Function: SetCloudDensity(density)"
+    },
+    "Client.GetCloudDensity": {
+        "prefix": "GetCloudDensity",
+        "body": "GetCloudDensity()$0\r\n",
+        "description": "(Client) Function: GetCloudDensity()"
+    },
     "Client.SetSunRadius": {
         "prefix": "SetSunRadius",
         "body": "SetSunRadius(${1:radius})$0\r\n",
         "description": "(Client) Function: SetSunRadius(radius)"
     },
-    "Client.SetSunShine": {
-        "prefix": "SetSunShine",
-        "body": "SetSunShine(${1:shine})$0\r\n",
-        "description": "(Client) Function: SetSunShine(shine)"
-    },
-    "Client.SetSunAzimuth": {
-        "prefix": "SetSunAzimuth",
-        "body": "SetSunAzimuth(${1:azimuth})$0\r\n",
-        "description": "(Client) Function: SetSunAzimuth(azimuth)"
-    },
-    "Client.SetStarsBrightness": {
-        "prefix": "SetStarsBrightness",
-        "body": "SetStarsBrightness(${1:brightness})$0\r\n",
-        "description": "(Client) Function: SetStarsBrightness(brightness)"
+    "Client.GetSunRadius": {
+        "prefix": "GetSunRadius",
+        "body": "GetSunRadius()$0\r\n",
+        "description": "(Client) Function: GetSunRadius()"
     },
     "Client.SetMoonRadius": {
         "prefix": "SetMoonRadius",
         "body": "SetMoonRadius(${1:radius})$0\r\n",
         "description": "(Client) Function: SetMoonRadius(radius)"
     },
-    "Client.SetMoonShine": {
-        "prefix": "SetMoonShine",
-        "body": "SetMoonShine(${1:shine})$0\r\n",
-        "description": "(Client) Function: SetMoonShine(shine)"
+    "Client.GetMoonRadius": {
+        "prefix": "GetMoonRadius",
+        "body": "GetMoonRadius(${1:radius})$0\r\n",
+        "description": "(Client) Function: GetMoonRadius(radius)"
     },
-    "Client.SetFogDensity": {
-        "prefix": "SetFogDensity",
-        "body": "SetFogDensity(${1:density})$0\r\n",
-        "description": "(Client) Function: SetFogDensity(density)"
+    "Client.SetHeightFogDensity": {
+        "prefix": "SetHeightFogDensity",
+        "body": "SetHeightFogDensity(${1:density})$0\r\n",
+        "description": "(Client) Function: SetHeightFogDensity(density)"
     },
-    "Client.SetSunLightIntensity": {
-        "prefix": "SetSunLightIntensity",
-        "body": "SetSunLightIntensity(${1:intensity})$0\r\n",
-        "description": "(Client) Function: SetSunLightIntensity(intensity)"
+    "Client.GetHeightFogDensity": {
+        "prefix": "GetHeightFogDensity",
+        "body": "GetHeightFogDensity()$0\r\n",
+        "description": "(Client) Function: GetHeightFogDensity()"
     },
-    "Client.SetSkyLightIntensity": {
-        "prefix": "SetSkyLightIntensity",
-        "body": "SetSkyLightIntensity(${1:intensity})$0\r\n",
-        "description": "(Client) Function: SetSkyLightIntensity(intensity)"
-    },
-    "Client.SetMoonLightIntensity": {
-        "prefix": "SetMoonLightIntensity",
-        "body": "SetMoonLightIntensity(${1:intensity})$0\r\n",
-        "description": "(Client) Function: SetMoonLightIntensity(intensity)"
-    },
-    "Client.SetSkyRotationSpeed": {
-        "prefix": "SetSkyRotationSpeed",
-        "body": "SetSkyRotationSpeed(${1:speed})$0\r\n",
-        "description": "(Client) Function: SetSkyRotationSpeed(speed)"
-    },
-    "Client.SetWeather": {
-        "prefix": "SetWeather",
-        "body": "SetWeather(${1:weather})$0\r\n",
-        "description": "(Client) Function: SetWeather(weather)"
-    },
+
+
     "Client.GetPing": {
         "prefix": "GetPing",
         "body": "GetPing()$0\r\n",
@@ -814,6 +927,18 @@
         "body": "GetNetworkStats()$0\r\n",
         "description": "(Client) Function: GetNetworkStats()"
     },
+    "Client.GetServerIP": {
+        "prefix": "GetServerIP",
+        "body": "GetServerIP()$0\r\n",
+        "description": "(Client) Function: GetServerIP()"
+    },
+    "Client.GetServerPort": {
+        "prefix": "GetServerPort",
+        "body": "GetServerPort()$0\r\n",
+        "description": "(Client) Function: GetServerPort()"
+    },
+
+
     "Client.GetNPCActor": {
         "prefix": "GetNPCActor",
         "body": "GetNPCActor(${1:npcid})$0\r\n",
@@ -864,6 +989,8 @@
         "body": "SetNPCOutline(${1:npc }, ${2:bEnable (optional)})$0\r\n",
         "description": "(Client) Function: SetNPCOutline(npc ,bEnable (optional))"
     },
+
+
     "Client.GetObjectActor": {
         "prefix": "GetObjectActor",
         "body": "GetObjectActor(${1:object})$0\r\n",
@@ -989,6 +1116,8 @@
         "body": "SetObjectAnimatedTexture(${1:object}, ${2:TextureFile}, ${3:Rows}, ${4:Columns}, ${5:MaterialSlot (optional)})$0\r\n",
         "description": "(Client) Function: SetObjectAnimatedTexture(object,TextureFile,Rows,Columns,MaterialSlot (optional))"
     },
+
+
     "Client.AddEvent": {
         "prefix": "AddEvent",
         "body": "AddEvent(${1:EventName}, ${2:LuaFunction })$0\r\n",
@@ -1009,6 +1138,8 @@
         "body": "CallRemoteEvent(${2:EventName}, ${3:UserArgs (optional)})$0\r\n",
         "description": "(Client) Function: CallRemoteEvent(player,EventName,UserArgs (optional))"
     },
+
+
     "Client.GetPickupActor": {
         "prefix": "GetPickupActor",
         "body": "GetPickupActor(${1:pickupid})$0\r\n",
@@ -1044,11 +1175,8 @@
         "body": "GetPickupLocation(${1:pickupid})$0\r\n",
         "description": "(Client) Function: GetPickupLocation(pickupid)"
     },
-    "Client.GetPlayerCount": {
-        "prefix": "GetPlayerCount",
-        "body": "GetPlayerCount()$0\r\n",
-        "description": "(Client) Function: GetPlayerCount()"
-    },
+
+    
     "Client.GetDoorActor": {
         "prefix": "GetDoorActor",
         "body": "GetDoorActor(${1:doorid})$0\r\n",
@@ -1079,6 +1207,18 @@
         "body": "GetStreamedDoors()$0\r\n",
         "description": "(Client) Function: GetStreamedDoors()"
     },
+    "Client.SetDoorPropertyValue": {
+        "prefix": "SetDoorPropertyValue",
+        "body": "SetDoorPropertyValue(${1:door}, ${2:PropertyName}, ${3:Value}, ${4:bSync (optional)})$0\r\n",
+        "description": "(Client) Function: SetDoorPropertyValue(door, PropertyName,Value,bSync (optional))"
+    },
+    "Client.GetDoorPropertyValue": {
+        "prefix": "GetDoorPropertyValue",
+        "body": "GetDoorPropertyValue(${1:door}, ${2:PropertyName})$0\r\n",
+        "description": "(Client) Function: GetDoorPropertyValue(door, PropertyName)"
+    },
+
+
     "Client.GetSoundCount": {
         "prefix": "GetSoundCount",
         "body": "GetSoundCount()$0\r\n",
@@ -1149,6 +1289,8 @@
         "body": "SetSoundFadeOut(${1:sound}, ${2:Duration}, ${3:VolumeLevel})$0\r\n",
         "description": "(Client) Function: SetSoundFadeOut(sound,Duration,VolumeLevel)"
     },
+
+
     "Client.SetText3DPropertyValue": {
         "prefix": "SetText3DPropertyValue",
         "body": "SetText3DPropertyValue(${1:text3d}, ${2:PropertyName}, ${3:Value}, ${4:bSync (optional)})$0\r\n",
@@ -1174,6 +1316,8 @@
         "body": "GetText3DLocation(${1:text3d})$0\r\n",
         "description": "(Client) Function: GetText3DLocation(text3d)"
     },
+
+
     "Client.Delay": {
         "prefix": "Delay",
         "body": "Delay(${1:Milliseconds}, ${2:LuaFunction}, ${3:UserArgs (optional) (optional)})$0\r\n",
@@ -1224,6 +1368,8 @@
         "body": "GetTimerRemainingTime(${1:timer})$0\r\n",
         "description": "(Client) Function: GetTimerRemainingTime(timer)"
     },
+
+
     "Client.SetVehiclePropertyValue": {
         "prefix": "SetVehiclePropertyValue",
         "body": "SetVehiclePropertyValue(${1:vehicle}, ${2:PropertyName}, ${3:Value}, ${4:bSync (optional)})$0\r\n",
@@ -1384,6 +1530,28 @@
         "body": "GetVehicleHealth(${1:vehicle})$0\r\n",
         "description": "(Client) Function: GetVehicleHealth(vehicle)"
     },
+    "Client.GetVehicleSkeletalMeshComponent": {
+        "prefix": "GetVehicleSkeletalMeshComponent",
+        "body": "GetVehicleSkeletalMeshComponent(${1:vehicle})$0\r\n",
+        "description": "(Client) Function: GetVehicleSkeletalMeshComponent(vehicle)"
+    },
+    "Client.GetVehicleDriver": {
+        "prefix": "GetVehicleDriver",
+        "body": "GetVehicleDriver(${1:vehicle})\r\n",
+        "description": "(Client) Function: GetVehicleDriver(vehicle)"
+    },
+    "Client.GetVehicleNumberOfSeats": {
+        "prefix": "GetVehicleNumberOfSeats",
+        "body": "GetVehicleNumberOfSeats(${1:vehicle})\r\n",
+        "description": "(Client) Function: GetVehicleNumberOfSeats(vehicle)"
+    },
+    "Client.GetVehiclePassenger": {
+        "prefix": "GetVehiclePassenger",
+        "body": "GetVehiclePassenger(${1:vehicle})\r\n",
+        "description": "(Client) Function: GetVehiclePassenger(vehicle)"
+    },
+
+
     "Client.GetWebUICount": {
         "prefix": "GetWebUICount",
         "body": "GetWebUICount()$0\r\n",
@@ -1469,6 +1637,28 @@
         "body": "SetWebAnchors(${1:web}, ${2:MinX}, ${3:MinY}, ${4:MaxX}, ${5:MaxY})$0\r\n",
         "description": "(Client) Function: SetWebAnchors(web,MinX,MinY,MaxX,MaxY)"
     },
+    "Client.SetWebFocus": {
+        "prefix": "SetWebFocus",
+        "body": "SetWebFocus(${1:web})$0\r\n",
+        "description": "(Client) Function: SetWebFocus(web)"
+    },
+
+
+    "Client.SetInputMode": {
+        "prefix": "SetInputMode",
+        "body": "SetInputMode(${1:InputMode})$0\r\n",
+        "description": "(Client) Function: SetInputMode(InputMode)"
+    },
+    "Client.GetInputMode": {
+        "prefix": "GetInputMode",
+        "body": "GetInputMode()$0\r\n",
+        "description": "(Client) Function: GetInputMode()"
+    },
+    "Client.IsInputKeyDown": {
+        "prefix": "IsInputKeyDown",
+        "body": "IsInputKeyDown(${1:key})$0\r\n",
+        "description": "(Client) Function: IsInputKeyDown(key)"
+    },
     "Client.IsCtrlPressed": {
         "prefix": "IsCtrlPressed",
         "body": "IsCtrlPressed()$0\r\n",
@@ -1504,39 +1694,9 @@
         "body": "SetControlRotation(${1:pitch}, ${2:yaw}, ${3:roll})$0\r\n",
         "description": "(Client) Function: SetControlRotation(pitch,yaw,roll)"
     },
-    "Client.SetPlayerVoiceTone": {
-        "prefix": "SetPlayerVoiceTone",
-        "body": "SetPlayerVoiceTone(${1:player}, ${2:gender})$0\r\n",
-        "description": "(Client) Function: SetPlayerVoiceTone(player, gender)"
-    },
-    "Client.GetVehiclePassenger": {
-        "prefix": "GetVehiclePassenger",
-        "body": "GetVehiclePassenger(${1:vehicle})\r\n",
-        "description": "(Client) Function: GetVehiclePassenger(vehicle)"
-    },
-    "Client.GetVehicleDriver": {
-        "prefix": "GetVehicleDriver",
-        "body": "GetVehicleDriver(${1:vehicle})\r\n",
-        "description": "(Client) Function: GetVehicleDriver(vehicle)"
-    },
-    "Client.GetVehicleNumberOfSeats": {
-        "prefix": "GetVehicleNumberOfSeats",
-        "body": "GetVehicleNumberOfSeats(${1:vehicle})\r\n",
-        "description": "(Client) Function: GetVehicleNumberOfSeats(vehicle)"
-    },
-    "Client.SetDoorPropertyValue": {
-        "prefix": "SetDoorPropertyValue",
-        "body": "SetDoorPropertyValue(${1:door}, ${2:PropertyName}, ${3:Value}, ${4:bSync (optional)})$0\r\n",
-        "description": "(Client) Function: SetDoorPropertyValue(door, PropertyName,Value,bSync (optional))"
-    },
-    "Client.GetDoorPropertyValue": {
-        "prefix": "GetDoorPropertyValue",
-        "body": "GetDoorPropertyValue(${1:door}, ${2:PropertyName})$0\r\n",
-        "description": "(Client) Function: GetDoorPropertyValue(door, PropertyName)"
-    },
-    "Client.TogglePlayerTag": {
-        "prefix": "TogglePlayerTag",
-        "body": "TogglePlayerTag(${1:player}, ${2:tagname}, ${3:enable})$0\r\n",
-        "description": "(Client) Function: TogglePlayerTag(player, tagname, enable)"
+    "Client.GetInputAxisValue": {
+        "prefix": "GetInputAxisValue",
+        "body": "GetInputAxisValue(${1:AxisName})$0\r\n",
+        "description": "(Client) Function: GetInputAxisValue(AxisName)"
     }
 }
